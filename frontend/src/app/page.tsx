@@ -220,6 +220,142 @@ const PRODUCTS: Product[] = [
 ];
 
 // =========================================================================
+// 2.1. FLASH SALE PRODUCTS DATA
+// =========================================================================
+interface FlashSaleProduct extends Product {
+  originCountry: string;
+  originFlag: string;
+  discountText: string;
+  soldCount: number;
+  totalLimit: number;
+  badgeText?: string;
+}
+
+const FLASH_SALE_PRODUCTS: FlashSaleProduct[] = [
+  {
+    id: 'fs-001',
+    name: 'Dầu gội làm dày tóc, kích thích mọc tóc Vichy Dercos Neogenic Redensifying Shampoo 200ml',
+    subName: 'Dầu gội Vichy Dercos tăng mật độ tóc',
+    category: 'Dược mỹ phẩm',
+    activeIngredient: 'Stemoxydine 5%',
+    price: 382200,
+    originalPrice: 490000,
+    unit: 'Chai 200ml',
+    image: 'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=300&auto=format&fit=crop&q=80',
+    isRx: false,
+    isSale: true,
+    saleText: 'Giảm 22%',
+    description: 'Dầu gội giúp làm dày tóc và kích thích mọc tóc dành cho tóc thưa, rụng nhiều. Giúp tóc chắc khỏe từ gốc đến ngọn.',
+    originCountry: 'Pháp',
+    originFlag: '🇫🇷',
+    discountText: '-22%',
+    soldCount: 0,
+    totalLimit: 100,
+    badgeText: 'Ưu đãi giá sốc'
+  },
+  {
+    id: 'fs-002',
+    name: 'Sữa tăng cường sức khỏe khối cơ tăng miễn dịch Ensure Gold StrengthPro hương Vani 850g',
+    subName: 'Ensure Gold StrengthPro Vani',
+    category: 'Sữa công thức',
+    activeIngredient: 'HMB, Yến sào, Đạm chất lượng cao',
+    price: 385000,
+    originalPrice: 435000,
+    unit: 'Hộp 850g',
+    image: 'https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?w=300&auto=format&fit=crop&q=80',
+    isRx: false,
+    isSale: true,
+    saleText: 'Giảm 50k',
+    description: 'Dinh dưỡng đầy đủ và cân đối giúp tăng cường sức khỏe khối cơ, hệ miễn dịch và hệ tim mạch cho người lớn tuổi.',
+    originCountry: 'Hoa Kỳ',
+    originFlag: '🇺🇸',
+    discountText: '-50.000đ',
+    soldCount: 35,
+    totalLimit: 100
+  },
+  {
+    id: 'fs-003',
+    name: 'Sữa tăng cường sức khỏe khối cơ tăng miễn dịch Ensure Gold StrengthPro hương Lúa Mạch 850g',
+    subName: 'Ensure Gold StrengthPro Lúa Mạch',
+    category: 'Sữa công thức',
+    activeIngredient: 'HMB, Yến sào, Đạm chất lượng cao',
+    price: 385000,
+    originalPrice: 435000,
+    unit: 'Hộp 850g',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&auto=format&fit=crop&q=80',
+    isRx: false,
+    isSale: true,
+    saleText: 'Giảm 50k',
+    description: 'Dinh dưỡng đầy đủ và cân đối giúp tăng cường sức khỏe khối cơ, hệ miễn dịch và hệ tim mạch cho người lớn tuổi.',
+    originCountry: 'Hoa Kỳ',
+    originFlag: '🇺🇸',
+    discountText: '-50.000đ',
+    soldCount: 29,
+    totalLimit: 100
+  },
+  {
+    id: 'fs-004',
+    name: 'Sữa bổ sung dinh dưỡng đặc biệt cho người đái tháo đường Glucerna hương Vani 850g',
+    subName: 'Sữa Glucerna cho người tiểu đường',
+    category: 'Sữa công thức',
+    activeIngredient: 'Hệ bột đường tiên tiến Fibersol',
+    price: 382000,
+    originalPrice: 422000,
+    unit: 'Hộp 850g',
+    image: 'https://images.unsplash.com/photo-1547489432-cf93fa6c71ee?w=300&auto=format&fit=crop&q=80',
+    isRx: false,
+    isSale: true,
+    saleText: 'Giảm 40k',
+    description: 'Sản phẩm dinh dưỡng chuyên biệt dành cho người đái tháo đường và tiền đái tháo đường, giúp bình ổn đường huyết.',
+    originCountry: 'Hoa Kỳ',
+    originFlag: '🇺🇸',
+    discountText: '-40.000đ',
+    soldCount: 18,
+    totalLimit: 100
+  },
+  {
+    id: 'fs-005',
+    name: 'Sữa tăng cân hiệu quả từ 12 tuổi Appeton Weight Gain hương Vani 900g',
+    subName: 'Sữa Appeton Weight Gain Vani',
+    category: 'Sữa công thức',
+    activeIngredient: 'L-Protemax, Đạm Whey dễ hấp thu',
+    price: 922500,
+    originalPrice: 1025000,
+    unit: 'Hộp 900g',
+    image: 'https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=300&auto=format&fit=crop&q=80',
+    isRx: false,
+    isSale: true,
+    saleText: 'Giảm 10%',
+    description: 'Sữa giúp tăng cân hiệu quả và an toàn cho người gầy từ 12 tuổi trở lên, giúp hấp thu dưỡng chất tối đa.',
+    originCountry: 'Malaysia',
+    originFlag: '🇲🇾',
+    discountText: '-10%',
+    soldCount: 3,
+    totalLimit: 200
+  },
+  {
+    id: 'fs-006',
+    name: 'Viên bổ sung vitamin và khoáng chất cho phụ nữ mang thai Pregnacare Max 84 viên',
+    subName: 'Pregnacare Max cho bà bầu',
+    category: 'Thực phẩm chức năng',
+    activeIngredient: 'Folic Acid, Omega-3 DHA, Sắt, Canxi',
+    price: 495000,
+    originalPrice: 550000,
+    unit: 'Hộp 84 viên',
+    image: 'https://images.unsplash.com/photo-1616671276441-2f2c277b8bf4?w=300&auto=format&fit=crop&q=80',
+    isRx: false,
+    isSale: true,
+    saleText: 'Giảm 10%',
+    description: 'Viên uống bổ sung vitamin tổng hợp và khoáng chất tối ưu kèm DHA cho phụ nữ mang thai suốt thai kỳ.',
+    originCountry: 'Anh',
+    originFlag: '🇬🇧',
+    discountText: '-10%',
+    soldCount: 27,
+    totalLimit: 300
+  }
+];
+
+// =========================================================================
 // 3. CATEGORIES LIST
 // =========================================================================
 const CATEGORIES = [
@@ -292,6 +428,51 @@ export default function PharmaAssistIntegratedHomePage() {
   const [isAiTyping, setIsAiTyping] = useState(false);
 
   const [showDemoModal, setShowDemoModal] = useState(false);
+
+  // Flash Sale State
+  const [activeSlot, setActiveSlot] = useState<number>(1); // 1: Đang diễn ra, 2: Sắp diễn ra
+  const [timeLeft, setTimeLeft] = useState({ hours: 10, minutes: 3, seconds: 13 });
+  const flashSaleContainerRef = useRef<HTMLDivElement>(null);
+
+  // Flash Sale Countdown Logic
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const target = new Date();
+      target.setHours(22, 0, 0, 0); // Slot kết thúc lúc 22:00
+
+      // Nếu đã qua 22:00 hôm nay, slot tiếp theo sẽ kết thúc lúc 22:00 ngày mai
+      if (now.getTime() > target.getTime()) {
+        target.setDate(target.getDate() + 1);
+      }
+
+      const difference = target.getTime() - now.getTime();
+      
+      const hours = Math.floor(difference / (1000 * 60 * 60));
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      return { hours, minutes, seconds };
+    };
+
+    setTimeLeft(calculateTimeLeft());
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const scrollFlashSale = (direction: 'left' | 'right') => {
+    if (flashSaleContainerRef.current) {
+      const scrollAmount = 350;
+      flashSaleContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // =========================================================================
   // EFFECTS & BUSINESS LOGIC
@@ -996,6 +1177,235 @@ export default function PharmaAssistIntegratedHomePage() {
 
           </div>
 
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 4.1. FLASH SALE SECTION (CRAWLED FROM USER DESIGN IMAGE - HP STYLING) */}
+      {/* ========================================================================= */}
+      <section className="bg-white py-12 px-8 border-b border-[#e8e8e8]">
+        <div className="max-w-[1366px] mx-auto space-y-6">
+          
+          {/* 1. Flash sale banner title bar with gradient bg */}
+          <div className="bg-gradient-to-r from-[#296ef9] via-[#024ad8] to-[#0e3191] rounded-2xl p-6 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md relative overflow-hidden">
+            {/* Subtle light sparks background decorative */}
+            <div className="absolute right-0 top-0 w-64 h-full bg-[radial-gradient(#c9e0fc_1px,transparent_1px)] [background-size:16px_16px] opacity-15 pointer-events-none"></div>
+            
+            <div className="flex items-center gap-3 relative z-10">
+              {/* Lightning Bolt Yellow Icon */}
+              <div className="bg-amber-400 text-[#1a1a1a] h-10 w-10 rounded-full flex items-center justify-center font-bold text-xl shadow-lg animate-bounce">
+                ⚡
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight flex items-center gap-2">
+                  FLASH SALE GIÁ TỐT
+                </h3>
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#c9e0fc] block mt-0.5">
+                  Khuyến mãi giới hạn số lượng & thời gian
+                </span>
+              </div>
+            </div>
+
+            {/* Pill Orange Button "XEM NGAY" & link "Xem thể lệ >" */}
+            <div className="flex items-center gap-6 relative z-10 shrink-0">
+              <span className="text-xs text-white/80 hover:text-white cursor-pointer hover:underline transition-all">
+                Xem thể lệ &rsaquo;
+              </span>
+              <button className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-[#1a1a1a] font-extrabold text-[11px] tracking-[0.7px] uppercase px-6 h-10 rounded-full shadow-lg transition-all active:scale-95">
+                XEM NGAY
+              </button>
+            </div>
+          </div>
+
+          {/* 2. Slot selection tabs & countdown timer */}
+          <div className="bg-[#f7f7f7] border border-[#e8e8e8] rounded-xl flex flex-col md:flex-row items-center justify-between gap-4 overflow-hidden shadow-sm">
+            {/* Slots selector */}
+            <div className="flex flex-1 w-full md:w-auto border-b md:border-b-0 md:border-r border-[#e8e8e8]">
+              {/* Slot 1: Active today */}
+              <button
+                onClick={() => setActiveSlot(1)}
+                className={`flex-1 p-4 transition-all text-center md:text-left ${
+                  activeSlot === 1
+                    ? 'bg-white border-b-4 border-rose-600 text-rose-600 font-extrabold shadow-sm'
+                    : 'text-[#636363] hover:bg-white/50 font-semibold'
+                }`}
+              >
+                <div className="text-xs">08:00 - 22:00, {new Date().toLocaleDateString('vi-VN', {day: '2-digit', month: '2-digit'})}</div>
+                <div className="text-[10px] mt-0.5 uppercase tracking-wider font-bold">Đang diễn ra</div>
+              </button>
+
+              {/* Slot 2: Tomorrow */}
+              <button
+                onClick={() => setActiveSlot(2)}
+                className={`flex-1 p-4 transition-all text-center md:text-left ${
+                  activeSlot === 2
+                    ? 'bg-white border-b-4 border-rose-600 text-rose-600 font-extrabold shadow-sm'
+                    : 'text-[#636363] hover:bg-white/50 font-semibold'
+                }`}
+              >
+                <div className="text-xs">
+                  08:00 - 22:00, {(() => {
+                    const tomorrow = new Date();
+                    tomorrow.setDate(tomorrow.getDate() + 1);
+                    return tomorrow.toLocaleDateString('vi-VN', {day: '2-digit', month: '2-digit'});
+                  })()}
+                </div>
+                <div className="text-[10px] mt-0.5 uppercase tracking-wider font-bold">Sắp diễn ra</div>
+              </button>
+            </div>
+
+            {/* Countdown block */}
+            <div className="flex items-center gap-3 px-6 py-4 shrink-0">
+              <span className="text-xs font-bold text-[#1a1a1a] uppercase tracking-wider">
+                {activeSlot === 1 ? 'Kết thúc sau' : 'Bắt đầu sau'}
+              </span>
+              <div className="flex items-center gap-1.5 font-bold">
+                {/* Hours box */}
+                <div className="bg-red-600 text-white text-xs px-2 py-1.5 rounded-md shadow min-w-[28px] text-center font-mono">
+                  {String(activeSlot === 1 ? timeLeft.hours : timeLeft.hours + 12).padStart(2, '0')}
+                </div>
+                <span className="text-red-600 text-xs font-black">:</span>
+                {/* Minutes box */}
+                <div className="bg-red-600 text-white text-xs px-2 py-1.5 rounded-md shadow min-w-[28px] text-center font-mono">
+                  {String(timeLeft.minutes).padStart(2, '0')}
+                </div>
+                <span className="text-red-600 text-xs font-black">:</span>
+                {/* Seconds box */}
+                <div className="bg-red-600 text-white text-xs px-2 py-1.5 rounded-md shadow min-w-[28px] text-center font-mono">
+                  {String(timeLeft.seconds).padStart(2, '0')}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 3. Product Carousel container */}
+          <div className="relative group">
+            
+            {/* Carousel navigation controls (White circle with blue border shadow) */}
+            <button
+              onClick={() => scrollFlashSale('left')}
+              className="absolute left-[-18px] top-[45%] h-9 w-9 bg-white border border-[#e8e8e8] text-[#024ad8] hover:bg-[#c9e0fc]/30 rounded-full flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all z-20 opacity-0 group-hover:opacity-100"
+            >
+              <ChevronLeft className="h-5 w-5 stroke-[2.5]" />
+            </button>
+            
+            <button
+              onClick={() => scrollFlashSale('right')}
+              className="absolute right-[-18px] top-[45%] h-9 w-9 bg-white border border-[#024ad8] text-[#024ad8] hover:bg-[#c9e0fc]/30 rounded-full flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all z-20"
+            >
+              <ChevronRight className="h-5 w-5 stroke-[2.5]" />
+            </button>
+
+            {/* Scrolling Products Row */}
+            <div
+              ref={flashSaleContainerRef}
+              className="flex gap-5 overflow-x-auto py-2.5 px-0.5 scroll-smooth scrollbar-none snap-x snap-mandatory"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {FLASH_SALE_PRODUCTS.map((prod) => {
+                // If tomorrow's slot, display simple lock mode
+                const isLocked = activeSlot === 2;
+
+                return (
+                  <div
+                    key={prod.id}
+                    className={`flex-none w-[220px] snap-start bg-white border border-[#e8e8e8] rounded-2xl p-4 shadow-[0_2px_8px_rgba(26,26,26,0.06)] hover:shadow-[0_8px_24px_rgba(26,26,26,0.12)] transition-all flex flex-col justify-between text-left relative ${isLocked ? 'opacity-85' : ''}`}
+                  >
+                    {/* Top image framing with thin blue border */}
+                    <div className="relative w-full aspect-square bg-[#f7f7f7] rounded-xl overflow-hidden mb-3 border border-[#024ad8]/10 group-hover:border-[#024ad8]/45 transition-colors">
+                      {/* Left Badge: flag origin */}
+                      <span className="absolute top-2 left-2 bg-white/90 text-[#1a1a1a] text-[9px] font-bold px-1.5 py-0.5 rounded shadow-sm border border-[#e8e8e8] z-10 flex items-center gap-1">
+                        <span>{prod.originFlag}</span>
+                        <span>{prod.originCountry}</span>
+                      </span>
+
+                      {/* Right Badge: red discount tag */}
+                      <span className="absolute top-2 right-2 bg-red-600 text-white text-[9px] font-black tracking-wider px-1.5 py-0.5 rounded z-10 shadow-sm">
+                        {prod.discountText}
+                      </span>
+
+                      <img
+                        src={prod.image}
+                        alt={prod.name}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                      
+                      {isLocked && (
+                        <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] flex items-center justify-center z-20">
+                          <span className="bg-black/85 text-white text-[9px] font-bold tracking-widest px-2.5 py-1 rounded border border-white/20 uppercase">
+                            Chưa mở bán
+                          </span>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Metadata & Title */}
+                    <div className="space-y-1.5 flex-1 flex flex-col justify-between">
+                      <div className="space-y-1">
+                        <h4 className="text-xs font-extrabold text-[#1a1a1a] line-clamp-2 min-h-[32px] leading-snug hover:text-[#024ad8] transition-colors">
+                          {prod.name}
+                        </h4>
+                      </div>
+
+                      <div className="space-y-2 pt-2">
+                        {/* Prices */}
+                        <div className="flex items-baseline justify-between gap-1.5">
+                          <div className="text-sm font-bold text-[#024ad8]">
+                            {prod.price.toLocaleString('vi-VN')}₫
+                          </div>
+                          {prod.originalPrice && (
+                            <div className="text-[10px] text-[#636363] line-through font-medium">
+                              {prod.originalPrice.toLocaleString('vi-VN')}₫
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Unit size */}
+                        <div className="text-[9px] text-[#636363] font-semibold border-b border-[#f7f7f7] pb-1.5">
+                          Đơn vị: {prod.unit}
+                        </div>
+
+                        {/* Sold state progress bar */}
+                        <div className="space-y-1">
+                          <div className="flex items-center justify-between text-[9px] font-bold text-[#3d3d3d]">
+                            <span className="flex items-center gap-0.5">
+                              🔥 {prod.badgeText || `Đã bán ${prod.soldCount}/${prod.totalLimit}`}
+                            </span>
+                            {prod.soldCount > 0 && (
+                              <span>{Math.round((prod.soldCount / prod.totalLimit) * 100)}%</span>
+                            )}
+                          </div>
+                          {/* Progress bar line */}
+                          <div className="w-full bg-red-100 rounded-full h-1.5 overflow-hidden">
+                            <div
+                              className="bg-gradient-to-r from-red-500 to-orange-500 h-full rounded-full transition-all duration-500"
+                              style={{ width: `${prod.soldCount > 0 ? (prod.soldCount / prod.totalLimit) * 100 : 20}%` }}
+                            ></div>
+                          </div>
+                        </div>
+
+                        {/* Buy Button */}
+                        <button
+                          disabled={isLocked}
+                          onClick={() => handleAddToCart(prod)}
+                          className="w-full bg-[#024ad8] hover:bg-[#0e3191] disabled:bg-[#c2c2c2] disabled:text-[#636363] text-white text-[10px] font-extrabold tracking-[0.7px] uppercase h-9 rounded-full flex items-center justify-center transition-all shadow-sm active:scale-95"
+                        >
+                          Chọn mua
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* 4. Centered Footer link "Xem tất cả" */}
+          <div className="text-center pt-2">
+            <a href="#store" className="text-xs font-bold text-[#024ad8] hover:text-[#0e3191] transition-all inline-flex items-center gap-1">
+              Xem tất cả &rsaquo;
+            </a>
+          </div>
         </div>
       </section>
 

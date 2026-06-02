@@ -101,6 +101,10 @@ Mỗi khi hoàn thành một mốc phát triển hoặc cập nhật tiến trì
 > **Mục tiêu:** Nhật ký ghi lại các thay đổi, bản sửa lỗi, hoặc tính năng mới nhất đã được merge hoặc triển khai theo mốc thời gian gần nhất.
 > **Ví dụ:** `2026-05-22: Đã cấu hình và kết nối dự án với Supabase thành công.`
 
+- **2026-06-02 (Triển Khai Phần Flash Sale Giá Tốt Trên Trang Chủ Retail - PAC-93):** Thiết kế và tích hợp thành công phần "FLASH SALE GIÁ TỐT" giống 100% trong ảnh mẫu người dùng cung cấp.
+  1. **Countdown Timer & Slot Selector:** Xây dựng đồng hồ đếm ngược động lùi theo giây và cơ chế chuyển đổi hai khung giờ ("Đang diễn ra" và "Sắp diễn ra" với chế độ khóa Chọn mua khi chưa mở bán).
+  2. **Product Carousel:** Thiết kế Carousel cuộn mượt bằng useRef và render 6 sản phẩm Flash Sale y hệt ảnh (Vichy Dercos, Ensure Gold x2, Glucerna, Appeton Weight Gain, Pregnacare Max) kèm cờ quốc gia xuất xứ, nhãn giảm giá đỏ, progress bar trạng thái bán và nút Chọn mua dạng pill.
+  3. **Tích hợp Giỏ hàng:** Click "Chọn mua" trên sản phẩm sale sẽ tự động đồng bộ đẩy vào giỏ hàng y khoa chung ở trang chủ.
 - **2026-05-30 (Hoàn Thành Hệ Thống Phân Quyền & Nghiệp Vụ Y Tế - POS Bán Hàng Lâm Sàng & Lô Hạn Dùng):** Đã triển khai và hoàn thiện khép kín toàn bộ hệ thống phân quyền (RBAC) cùng các giao diện nghiệp vụ y tế thực tế, đáp ứng tuyệt đối các quy tắc nghiệp vụ nghiêm ngặt trong `rules-w-pharmaassist.md`. Biên dịch Next.js build sạch 100% không cảnh báo linter hay TypeScript.
   1. **Dashboard Tổng Quan (`/dashboard` - Sprint 1)**: Nâng cấp biểu đồ báo cáo doanh thu AreaChart và stacked BarChart cơ cấu cảnh báo chéo lâm sàng sử dụng thư viện **Recharts**.
   2. **Quản Lý Danh Mục (`/medicines` - Sprint 2)**: Xây dựng bảng danh mục hoạt chất, phân nhóm điều trị, và bộ form cấu hình thuộc tính Rx (yêu cầu đơn thuốc) trực quan.
