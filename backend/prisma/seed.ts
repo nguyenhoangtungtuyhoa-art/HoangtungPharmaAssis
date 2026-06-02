@@ -70,8 +70,19 @@ async function main() {
     },
   });
 
+  const customerRole = await prisma.role.upsert({
+    where: { code: 'CUSTOMER' },
+    update: {},
+    create: {
+      id: 4,
+      code: 'CUSTOMER',
+      name: 'CUSTOMER',
+      description: 'Regular Customer of the pharmacy',
+    },
+  });
+
   console.log(
-    `Roles seeded: ${adminRole.name}, ${staffRole.name}, ${warehouseRole.name}`,
+    `Roles seeded: ${adminRole.name}, ${staffRole.name}, ${warehouseRole.name}, ${customerRole.name}`,
   );
 
   // 2. Prepare Demo Users
@@ -93,6 +104,12 @@ async function main() {
       password: 'warehouse123',
       fullName: 'PharmaWarehouse Manager',
       roleId: 3,
+    },
+    {
+      email: 'user@pharmaassist.com',
+      password: 'user123',
+      fullName: 'PharmaCustomer User',
+      roleId: 4,
     },
   ];
 

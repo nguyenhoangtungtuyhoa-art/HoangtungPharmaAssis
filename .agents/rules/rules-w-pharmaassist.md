@@ -12,7 +12,10 @@ Tập hợp các nguyên tắc và chỉ dẫn dành cho AI Agent khi tham gia p
 - **Bắt đầu phiên làm việc:** Mỗi khi bắt đầu một phiên làm việc mới, AI Agent **bắt buộc phải đọc lại** file [rules-w-pharmaassist.md](file:///Users/twot/Documents/HKII_NAM_3/16_Cong_Nghe_Pham_Mem/PharmaAssist/.agents/rules/rules-w-pharmaassist.md) này để ghi nhớ các nguyên tắc.
 - **Ghi chép ý tưởng và chốt thiết kế:** Khi làm việc với người dùng, đối với những phần người dùng đã chốt hoặc có ý tưởng thiết kế rõ ràng, AI Agent phải cập nhật ngay vào file [WORKING-CONTEXT.md](file:///Users/twot/Documents/HKII_NAM_3/16_Cong_Nghe_Pham_Mem/PharmaAssist/WORKING-CONTEXT.md) để nắm rõ và lưu trữ thông tin dự án.
 - **Ghi nhận tiến độ công việc:** Khi hoàn thành một phần công việc mới, AI Agent phải tóm tắt ngắn gọn những việc đã làm vào [WORKING-CONTEXT.md](file:///Users/twot/Documents/HKII_NAM_3/16_Cong_Nghe_Pham_Mem/PharmaAssist/WORKING-CONTEXT.md) để các phiên làm việc sau biết được tiến độ đã đến đâu. Đồng thời, ghi chú lại bất kỳ phần lưu ý quan trọng nào (nếu có).
-- **Phản hồi từ khóa "Bắt đầu":** Khi người dùng nhắn tin `"Bắt đầu"`, AI Agent phải tự động đọc file [WORKING-CONTEXT.md](file:///Users/twot/Documents/HKII_NAM_3/16_Cong_Nghe_Pham_Mem/PharmaAssist/WORKING-CONTEXT.md) để hiểu lại toàn bộ bối cảnh dự án, sau đó báo cáo nhanh cho người dùng biết trạng thái hiện tại của dự án.
+- **Phản hồi từ khóa "Bắt đầu":** Khi người dùng nhắn tin `"Bắt đầu"`, AI Agent phải:
+  1. Tự động pull/cập nhật code mới nhất của nhánh `develop` từ remote repository `https://github.com/TwotNguyenVN/PharmaAssist.git` về hai nhánh `main` và `develop` ở local.
+  2. Tự động checkout về lại nhánh `develop` ở local để sẵn sàng làm việc và chờ người dùng gửi yêu cầu mới.
+  3. Tự động đọc file [WORKING-CONTEXT.md](file:///Users/twot/Documents/HKII_NAM_3/16_Cong_Nghe_Pham_Mem/PharmaAssist/WORKING-CONTEXT.md) để hiểu lại toàn bộ bối cảnh dự án, sau đó báo cáo nhanh cho người dùng biết trạng thái hiện tại của dự án.
 - **Giao tiếp với người dùng:** Luôn phản hồi bằng tiếng Việt (theo ngôn ngữ của người dùng).
 - **Mã nguồn (Code & Comments):** Mọi tên biến, tên hàm, cấu trúc file và comment trong code đều viết bằng **tiếng Anh**. Comment tập trung giải thích **TẠI SAO (WHY)** làm như vậy, thay vì giải thích **CÁI GÌ (WHAT)**.
 - **Tài liệu:** Tài liệu phát triển phần mềm chính thức (SRS, Architecture, Database Design, v.v.) viết bằng tiếng Việt và tiếng Anh đồng bộ.
@@ -66,6 +69,10 @@ Tập hợp các nguyên tắc và chỉ dẫn dành cho AI Agent khi tham gia p
 - **Checklist bắt buộc trước khi Push:**
   - Chạy kiểm tra biên dịch (`npm run build` hoặc type check thích hợp) để đảm bảo code không bị lỗi cú pháp/TypeScript trên máy local.
   - Luôn kéo code mới nhất từ develop về bằng `git pull origin develop --rebase` (hoặc merge) để giải quyết xung đột cục bộ trước khi push.
+- **Quy trình tiếp nhận yêu cầu mới và chuyển nhánh:**
+  - Đối với mỗi yêu cầu mới từ người dùng (chỉnh sửa, thêm mới tính năng, sửa bug, v.v.), AI Agent bắt buộc phải kiểm tra xem yêu cầu này có phù hợp với nhánh hiện tại đang đứng hay không.
+  - Nếu không phù hợp hoặc là yêu cầu mới, AI Agent phải xác định mã Jira issue key (`PAC-xxx`) tương ứng, sau đó tra cứu trong file [.agents/git-skills/branch-on-jira.md](file:///Users/twot/Documents/HKII_NAM_3/16_Cong_Nghe_Pham_Mem/PharmaAssist/.agents/git-skills/branch-on-jira.md) để chuyển sang nhánh chuẩn (hoặc tạo mới từ `develop` nếu chưa tồn tại ở local).
+  - Sau mỗi lần hoàn thành một bước/yêu cầu thực hiện, AI Agent bắt buộc phải thực hiện commit (sử dụng format `type(PAC-xxx): description`) và push lên đúng nhánh tính năng/sửa lỗi đó.
 - **Xác định nhánh đẩy code (Push Branch Selection):** Mỗi khi người dùng yêu cầu push code hoặc commit, AI Agent bắt buộc phải thực hiện các bước sau:
   1. Phân tích `WORKING-CONTEXT.md` (mục `Active Queues` hoặc `Latest Execution Notes`) hoặc xem các file vừa thay đổi để xác định mã Jira issue key (`PAC-xxx`) hiện tại.
   2. Tra cứu trong file [.agents/git-skills/branch-on-jira.md](file:///Users/twot/Documents/HKII_NAM_3/16_Cong_Nghe_Pham_Mem/PharmaAssist/.agents/git-skills/branch-on-jira.md) để tìm chính xác tên nhánh Git tương ứng (ví dụ: `feature/PAC-xxx-slug`).
