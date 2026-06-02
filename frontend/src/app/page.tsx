@@ -195,11 +195,11 @@ const NAV_MEGA_MENU_DATA: MegaCategory[] = [
         iconName: "Activity",
         children: ["Sinh lý nam", "Sinh lý nữ", "Tăng cường sinh lực", "Cân bằng nội tiết tố"],
         featuredProducts: [
-          { name: "Sâm Alipas Platinum (30 viên)", price: 750000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2021/10/00021677-sam-alipas-platinum-ecogreen-30v-tang-cuong-sinh-luc-nam-gioi-7798-6169_large.jpg" },
-          { name: "Angela Gold (30 viên)", price: 720000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2021/10/00021678-angela-gold-ecogreen-30v-sam-nhan-sam-quy-tang-cuong-sinh-ly-nu-9343-6169_large.jpg" },
-          { name: "Tinh dầu hoa anh thảo Blackmores EPO", price: 550000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2021/12/00344405-tinh-dau-hoa-anh-thao-blackmores-evening-primrose-oil-190v-9159-61bf_large.jpg" },
-          { name: "Oyster Plus Zinc Goodhealth (60 viên)", price: 350000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2020/07/00018503-oyster-plus-goodhealth-60v-tinh-chat-hau-ho-tro-sinh-ly-nam-7729-5f21_large.jpg" },
-          { name: "Maca 500mg Now Foods (100 viên)", price: 450000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2022/08/00501235-vien-uong-ho-tro-sinh-ly-nam-maca-now-100-vien-7313-630f_large.jpg" }
+          { name: "Sâm Alipas Platinum (30 viên)", price: 750000, unit: "hộp", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/00500768_mens_ginseng_alipas_new_ecogreen_60v_1645_62b5_large_ceb7d7acd7.jpg" },
+          { name: "Angela Gold (30 viên)", price: 720000, unit: "hộp", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/00000780_sam_agela_gold_dep_da_can_bang_noi_tiet_to_nu_5615_62af_large_8eba87f31b.jpg" },
+          { name: "Tinh dầu hoa anh thảo Blackmores EPO", price: 550000, unit: "hộp", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/00029096_evening_primrose_oil_epo_1000mg_goodhealth_70v_8018_62ae_large_3ef28d8fcf.jpg" },
+          { name: "Oyster Plus Zinc Goodhealth (60 viên)", price: 350000, unit: "hộp", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/00005685_tinh_chat_hau_oyster_plus_tang_cuong_sinh_luc_phai_manh_3213_62ae_large_c5942edd08.jpg" },
+          { name: "Maca 500mg Now Foods (100 viên)", price: 450000, unit: "hộp", image: "" }
         ]
       },
       {
@@ -208,11 +208,11 @@ const NAV_MEGA_MENU_DATA: MegaCategory[] = [
         iconName: "Heart",
         children: ["Huyết áp cao/thấp", "Giảm cholesterol mỡ máu", "Phòng đột quỵ tai biến", "Bổ tim Coenzyme Q10"],
         featuredProducts: [
-          { name: "Coenzyme Q10 150mg Blackmores", price: 620000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2021/12/00344404-vien-uong-ho-tro-tim-mach-coq10-150mg-blackmores-30-vien-4813-61b6_large.jpg" },
-          { name: "Dầu cá Fish Oil 1000mg Kirkland", price: 480000, unit: "chai", image: "https://nhathuoclongchau.com.vn/images/product/2020/06/00004996-dau-ca-kirland-signature-omega3-fish-oil-400v-9742-5ee3_large.jpg" },
-          { name: "Nattospes ngừa cục máu đông (30 viên)", price: 165000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2022/07/00000940-nattospes-aau-30v-4309-62d9_large.jpg" },
-          { name: "Cardiocare ổn định tim mạch", price: 380000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2022/11/00033108-vien-uong-ho-tro-tim-mach-cardiocare-vitabiotics-30-vien-7221-6380_large.jpg" },
-          { name: "Omega-3 Triple Strength Webbers", price: 590000, unit: "lọ", image: "https://nhathuoclongchau.com.vn/images/product/2023/04/00502235-vien-dau-ca-tinh-khiet-omega3-triple-strength-webber-naturals-80-vien-2708-6447_large.jpg" }
+          { name: "Coenzyme Q10 150mg Blackmores", price: 620000, unit: "hộp", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/00345343_coq10_my_vien_uong_bo_tim_mach_2605_5c45_large_985993d8bd.jpg" },
+          { name: "Dầu cá Fish Oil 1000mg Kirkland", price: 480000, unit: "chai", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/DSC_09197_610196c48f.jpg" },
+          { name: "Nattospes ngừa cục máu đông (30 viên)", price: 165000, unit: "hộp", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/IMG_6883_37a908aa20.jpg" },
+          { name: "Cardiocare ổn định tim mạch", price: 380000, unit: "hộp", image: "" },
+          { name: "Omega-3 Triple Strength Webbers", price: 590000, unit: "lọ", image: "" }
         ]
       },
       {
@@ -221,7 +221,7 @@ const NAV_MEGA_MENU_DATA: MegaCategory[] = [
         iconName: "ClipboardList",
         children: ["Men vi sinh dạ dày", "Hỗ trợ đại tràng co thắt", "Thuốc bổ gan thải độc", "Bổ sung chất xơ hòa tan"],
         featuredProducts: [
-          { name: "Men vi sinh Optibac Probiotics", price: 490000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2021/12/00344406-optibac-probiotics-for-every-day-30v-men-vi-sinh-ho-tro-tieu-hoa-5823-61ba_large.jpg" },
+          { name: "Men vi sinh Optibac Probiotics", price: 490000, unit: "hộp", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/Optibac_FW_30_Front_Panel_With_The_Format_SQ_Pack_Shot_VIETNAM_e7e7290a6d.png" },
           { name: "Bảo Tràng Vương đại tràng", price: 230000, unit: "hộp", image: "" },
           { name: "Viên nghệ Curcumin 500mg Puritan", price: 420000, unit: "lọ", image: "" },
           { name: "Bổ gan Milk Thistle Blackmores", price: 390000, unit: "hộp", image: "" },
@@ -234,8 +234,8 @@ const NAV_MEGA_MENU_DATA: MegaCategory[] = [
         iconName: "Sparkles",
         children: ["Tăng cường tuần hoàn não", "Cải thiện trí nhớ tập trung", "Giảm stress mất ngủ kéo dài", "Ngừa sa sút trí tuệ"],
         featuredProducts: [
-          { name: "Ginkgo Biloba 120mg Trunature", price: 450000, unit: "lọ", image: "https://nhathuoclongchau.com.vn/images/product/2021/08/00022734-vien-uong-bo-nao-ginkgo-biloba-120mg-trunature-340-vien-7313-610e_large.jpg" },
-          { name: "OTiV cải thiện mất ngủ đau đầu", price: 330000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2021/10/00021679-otiv-ecogreen-30v-bo-nao-giam-dau-dau-mat-ngu-9669-6169_large.jpg" },
+          { name: "Ginkgo Biloba 120mg Trunature", price: 450000, unit: "lọ", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/00003337_ginkgo_biloba_60mg_60v_natures_bounty_8579_63db_large_dc0d941fcd.jpg" },
+          { name: "OTiV cải thiện mất ngủ đau đầu", price: 330000, unit: "hộp", image: "" },
           { name: "Hoạt huyết dưỡng não Cerebrolysin", price: 180000, unit: "hộp", image: "" },
           { name: "Brain DHA Kid cho bé", price: 350000, unit: "lọ", image: "" },
           { name: "Melatonin 5mg giúp ngủ ngon Natrol", price: 280000, unit: "lọ", image: "" }
@@ -247,8 +247,8 @@ const NAV_MEGA_MENU_DATA: MegaCategory[] = [
         iconName: "Activity",
         children: ["Giảm thoái hóa khớp", "Tái tạo sụn khớp", "Canxi ngừa loãng xương", "Dầu xoa bóp nóng lạnh"],
         featuredProducts: [
-          { name: "Glucosamine Chondroitin Kirkland", price: 680000, unit: "lọ", image: "https://nhathuoclongchau.com.vn/images/product/2020/06/00010996-glucosamine-hcl-1500mg-kirkland-signature-220v-5975-5ee3_large.jpg" },
-          { name: "JEX Peptan giảm đau xương khớp", price: 420000, unit: "hộp", image: "https://nhathuoclongchau.com.vn/images/product/2021/10/00021681-jex-natural-ecogreen-30v-giam-dau-xung-khoi-tai-tao-sun-khop-2342-6169_large.jpg" },
+          { name: "Glucosamine Chondroitin Kirkland", price: 680000, unit: "lọ", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/thuoc_glucosamine_stada_1500mg_sachet_30_goi_00033098_b66b8e113b.png" },
+          { name: "JEX Peptan giảm đau xương khớp", price: 420000, unit: "hộp", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/00032397_jex_the_he_moi_eco_60v_8040_62b0_large_0e07e3b7bb.jpg" },
           { name: "Canxi hữu cơ NextG Cal Úc", price: 320000, unit: "hộp", image: "" },
           { name: "Blackmores Joint Formula", price: 750000, unit: "hộp", image: "" },
           { name: "Dầu lạnh xoa bóp Glucosamine Hàn Quốc", price: 95000, unit: "tuýp", image: "" }
@@ -266,10 +266,10 @@ const NAV_MEGA_MENU_DATA: MegaCategory[] = [
         iconName: "Sparkles",
         children: ["Sữa rửa mặt dịu nhẹ", "Kem chống nắng phổ rộng", "Serum trị mụn mờ thâm", "Kem dưỡng ẩm chuyên sâu", "Toner cấp ẩm phục hồi"],
         featuredProducts: [
-          { name: "La Roche-Posay Anthelios SPF 50+", price: 485000, unit: "tuýp", image: "https://nhathuoclongchau.com.vn/images/product/2023/04/00020108-kem-chong-nang-la-roche-posay-anthelios-shaka-fluid-khong-huong-lieu-spf50-50ml-1563-6449_large.jpg" },
-          { name: "Nước tẩy trang Bioderma Sensibio H2O 500ml", price: 425000, unit: "chai", image: "https://nhathuoclongchau.com.vn/images/product/2021/04/00003056-nuoc-tay-trang-bioderma-hong-sensibio-h2o-500ml-5349-6086_large.jpg" },
-          { name: "Sữa rửa mặt CeraVe Hydrating Cleanser", price: 370000, unit: "chai", image: "https://nhathuoclongchau.com.vn/images/product/2022/02/00344407-cerave-hydrating-cleanser-for-normal-to-dry-skin-sra-rua-mat-am-da-236ml-5118-6202_large.jpg" },
-          { name: "Vichy Mineral 89 Serum phục hồi", price: 950000, unit: "chai", image: "https://nhathuoclongchau.com.vn/images/product/2021/12/00344408-vichy-mineral-89-50ml-duong-chat-khoang-co-dac-giup-phuc-hoi-da-8159-61bf_large.jpg" },
+          { name: "La Roche-Posay Anthelios SPF 50+", price: 485000, unit: "tuýp", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/KEM_CHONG_NANG_THAM_NHANH_KHONG_NHON_RIT_LA_ROCHE_POSAY_ANTHELIOS_UVAIR_SERUM_SOLAIRE_SPF_50_PA_50_ML_00050752_1_37b4bf4a4b.png" },
+          { name: "Nước tẩy trang Bioderma Sensibio H2O 500ml", price: 425000, unit: "chai", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/1_f6ec63aa2a.jpg" },
+          { name: "Sữa rửa mặt CeraVe Hydrating Cleanser", price: 370000, unit: "chai", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/DSC_00420_9eca1db0a1.jpg" },
+          { name: "Vichy Mineral 89 Serum phục hồi", price: 950000, unit: "chai", image: "https://cdn.nhathuoclongchau.com.vn/v1/static/vichy_4d95cd0f16.jpg" },
           { name: "Klairs Supple Preparation Facial Toner", price: 290000, unit: "chai", image: "" }
         ]
       },
