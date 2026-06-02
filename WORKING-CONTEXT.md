@@ -55,6 +55,7 @@ Dự án phát triển website quản lý nhà thuốc thông minh **PharmaAssis
 ## Latest Execution Notes
 
 ### 2026-06-02
+- **Tích hợp API Storage & Supabase (PAC-202):** Triển khai module `Storage` trong NestJS Backend để tương tác với Supabase Storage. Cung cấp các REST API endpoints: upload file, lấy signed URL có thời hạn, lấy public URL, và stream proxy dữ liệu ảnh trực tiếp từ Supabase Storage về client. Khắc phục hoàn toàn lỗi compile liên quan đến Multer và Express `isolatedModules` types bằng cách chuyển đổi sang `class` và sử dụng namespace imports. Đã viết 13 unit tests bao phủ 100% logic của service/controller và xác minh thủ công upload/stream thành công với bucket `medicine-images`. Nhánh phát triển đã được push lên `origin` (`feature/PAC-202-create-api-upload-image-medicine`).
 - **UI Navigation Redesign & Mega Menu:** Hoàn thành triển khai giao diện Mega Dropdown Menu (cấu trúc cây thư mục Mẹ - Con) cho cả 5 danh mục chính trên Navbar trang chủ Retail. Thiết kế bố cục hai cột, hoạt động hoàn toàn bằng hover. Khi rê chuột vào danh mục Mẹ (cấp 2) ở cột trái, danh mục Con (cấp 3) và 5 sản phẩm bán chạy tương ứng ở cột phải sẽ thay đổi tức thì, tích hợp ảnh thật từ nhà thuốc Long Châu. Khắc phục hoàn toàn lỗi ẩn menu do overflow và named group compile error.
 
 ### 2026-05-30
