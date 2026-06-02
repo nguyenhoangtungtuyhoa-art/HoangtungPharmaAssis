@@ -420,6 +420,28 @@ export default function HomePage() {
   const [toastMessage, setToastMessage] = useState("");
   const [activeSubId, setActiveSubId] = useState<string>("supplements-hormone");
   const [loading, setLoading] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Sync cart with localStorage
+  useEffect(() => {
+    setIsMounted(true);
+    if (typeof window !== 'undefined') {
+      const savedCart = localStorage.getItem('retail_cart');
+      if (savedCart) {
+        try {
+          setCart(JSON.parse(savedCart));
+        } catch (e) {
+          console.error("Error parsing cart from localStorage", e);
+        }
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isMounted && typeof window !== 'undefined') {
+      localStorage.setItem('retail_cart', JSON.stringify(cart));
+    }
+  }, [cart, isMounted]);
 
   // Smooth scroll and set category filter on menu click
   const handleCategoryClick = (categoryName: string, e: React.MouseEvent) => {

@@ -34,7 +34,7 @@ Dự án phát triển website quản lý nhà thuốc thông minh **PharmaAssis
 - [x] Thiết kế & migration database schema trên Supabase (Khởi tạo 100 bảng database).
 - [x] Triển khai Xác thực & Phân quyền Auth & RBAC (Sprint 1 - PAC-43 đến PAC-50).
 - [/] Triển khai Quản lý nhân viên & thuốc (Sprint 2 - PAC-51 đến PAC-67) -> **Đang thực hiện**.
-- [ ] Triển khai Quản lý Tồn kho & Nhập kho (Sprint 3 - PAC-68 đến PAC-84, PAC-87 đến PAC-92).
+- [ ] Triển khai Quản lý Tồn kho & Nhập kho (Sprint 3 - PAC-68 đến PAC-84, PAC-87 đến PAC-92) -> **Đang thực hiện (Hoàn thành giỏ hàng PAC-91)**.
 - [ ] Triển khai Luồng bán hàng POS & Kiểm tra tương tác thuốc (Sprint 4 - PAC-85, PAC-86, PAC-93 đến PAC-110).
 - [ ] Báo cáo & Dashboard tổng quan (Sprint 5 - PAC-111 đến PAC-120).
 - [ ] Triển khai AI Copilot Foundation (Sprint 6 - PAC-128 đến PAC-133, PAC-157 đến PAC-180).
@@ -55,7 +55,9 @@ Dự án phát triển website quản lý nhà thuốc thông minh **PharmaAssis
 ## Latest Execution Notes
 
 ### 2026-06-02
+- **Giỏ hàng Sales POS & Retail Cart (PAC-91 / T-49, T-50):** Hoàn thành tích hợp tính năng giỏ hàng hoàn chỉnh cho màn hình bán hàng tại quầy `Sales POS` (`frontend/src/app/sales/page.tsx`) và trang giỏ hàng bán lẻ trực tuyến `/cart` (`frontend/src/app/cart/page.tsx`). Hỗ trợ: tra cứu/chọn nhanh thuốc, tăng giảm số lượng, bảng tính tiền chi tiết (VAT, chiết khấu), tự động kiểm tra tương tác thuốc bằng luật (rule-based) ngay tại client (cảnh báo High/Medium/Low kèm mô tả và khuyến nghị), nhập ghi chú tư vấn của dược sĩ, xuất hóa đơn giả lập trừ tồn kho và nút in hóa đơn nhiệt (`window.print()`). Đồng thời, đồng bộ giỏ hàng trang chủ vào `localStorage` phục vụ thanh toán online.
 - **UI Navigation Redesign & Mega Menu:** Hoàn thành triển khai giao diện Mega Dropdown Menu (cấu trúc cây thư mục Mẹ - Con) cho cả 5 danh mục chính trên Navbar trang chủ Retail. Thiết kế bố cục hai cột, hoạt động hoàn toàn bằng hover. Khi rê chuột vào danh mục Mẹ (cấp 2) ở cột trái, danh mục Con (cấp 3) và 5 sản phẩm bán chạy tương ứng ở cột phải sẽ thay đổi tức thì, tích hợp ảnh thật từ nhà thuốc Long Châu. Khắc phục hoàn toàn lỗi ẩn menu do overflow và named group compile error.
+- **Khắc phục lỗi hình ảnh bị vỡ trong Mega Menu:** Cập nhật lại toàn bộ mảng dữ liệu `NAV_MEGA_MENU_DATA` trong [page.tsx](file:///c:/Users/ASUS/Downloads/HoangtungPharmaAssis/frontend/src/app/page.tsx) để sử dụng link CDN mới hoạt động (`https://cdn.nhathuoclongchau.com.vn/...`) hoặc đặt thành chuỗi rỗng `""` để kích hoạt fallback hiển thị icon Sparkles đẹp mắt thay vì hiển thị icon ảnh lỗi. Đã chạy build frontend thành công và push lên nhánh `bugfix/PAC-93-fix-mega-menu-images`.
 
 ### 2026-05-30
 - **Ghi nhận Nhánh Git Jira:** Phát triển thành công script `generate_branches.py` tự động hóa việc ánh xạ và dịch thuật 262 issue trên Jira sang tên nhánh Git tiếng Anh chuẩn slug (kebab-case), lưu tại [branch-on-jira.md](file:///Users/twot/Documents/HKII_NAM_3/16_Cong_Nghe_Pham_Mem/PharmaAssist/Jira/branch-on-jira.md).
